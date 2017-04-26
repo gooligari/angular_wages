@@ -1,0 +1,30 @@
+ .line-chart {
+  background-color: #001342;
+
+  //overriding NVD3 styles for line chart
+  .nvd3 .nv-axis line {
+    stroke: #1751C6;
+   }
+
+  .nvd3-svg {
+    padding-bottom: 30px;
+   }
+
+  .nv-group.nv-series-0 {
+    stroke: #BFCCDD !important; //overriding default line color of nvd3 line chart
+   }
+
+  svg text {
+     fill: white;
+   }
+
+  .caption {
+     color: white;
+   }
+
+  .nv-point {
+    stroke-opacity: 1 !important; //overriding default point style of nvd3 line chart
+    stroke-width: 1px !important; //overriding default point style of nvd3 line chart
+    fill-opacity: 0.2 !important; //overriding default point style of nvd3 line chart
+   }
+ }

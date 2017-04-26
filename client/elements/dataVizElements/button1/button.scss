@@ -1,0 +1,30 @@
+@import "../../../style/variable";
+$black-blk: #000000;
+
+// sass-lint:disable no-important
+.secondary {
+  background-color: $white !important;// Overriding angular material button style ( bg color )
+  border: 1px solid;
+  border-color: $black;
+  color: $black;
+}
+
+.seperator {
+  border-color: $black-blk;
+  border-left: 1px solid;
+  height: 100%;
+}
+
+.plain {
+  background-color: $black  !important; // Overriding angular material button style ( bg color )
+  border: 1px solid;
+  border-color: $black;
+  color: $black;
+}
+
+.action {
+  background-color: $gold  !important; // Overriding angular material button style ( bg color )
+  border: 1px solid;
+  border-color: $gold;
+  color: $black-darker !important;
+}

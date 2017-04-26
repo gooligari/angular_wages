@@ -1,0 +1,16 @@
+$white: #ffffff;
+
+big-icon {
+  .icon {
+    background-color: $white;
+    height: 128px;
+  }
+
+  .display-state {
+    background-color: $white;
+    margin: 0;
+    padding-bottom: 24px;
+    padding-top: 9px;
+    text-align: center;
+  }
+}

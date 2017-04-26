@@ -1,0 +1,41 @@
+@import '../common';
+
+.hero {
+  background-color: $darkBgColor;
+  height: 40rem;
+  padding: 3rem;
+
+  * {
+    color: $lightTextColor;
+  }
+}
+#chartd {
+  width: 40%;
+  height: 300px;
+  float: right;
+}	
+
+#chartspan {
+  width: 40%;
+  height: 300px;
+  float: right;
+}	
+
+.amcharts-export-menu-top-right {
+  top: 10px;
+  right: 0;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}

@@ -1,0 +1,34 @@
+.fleet-health-content {
+  min-height: 400px;
+  width: 100%;
+}
+
+@media  (max-width: 499px) {
+  /* For desktop: */
+  // .fleet-health-content
+  // {
+  //   width: 320px;
+  // }
+  .fleet-health-content .donut .summary .percent {
+    font-size: 50px;
+    }
+
+  .fleet-health-content .donut .summary .label {
+    font-size: 15px;
+    }
+}
+
+@media  (min-width: 500px) {
+  /* For desktop: */
+  // .fleet-health-content
+  // {
+  //   width: 500px;
+  // }
+  .fleet-health-content .donut .summary .percent {
+    font-size: 60px;
+    }
+
+  .fleet-health-content .donut .summary .label {
+    font-size: 20 px;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="outer">
+  <md-button ng-show="{{vm.type == 'primary'}}" ng-click="vm.onClick()" ng-disabled="false" class="md-raised md-primary">{{vm.text}}</md-button>
+  <md-button ng-show="{{vm.type == 'secondary'}}" ng-click="vm.onClick()" class="md-primary secondary"  ng-disabled="false">{{vm.text}}</md-button>
+  <md-button ng-show="{{vm.type == 'important'}}" ng-click="vm.onClick()" ng-disabled="false" class="md-raised md-primary"  md-colors="{background: 'yellow'}" md-colors-watch="false">
+      <md-icon md-svg-src="{{vm.logo}}"></md-icon>
+      <span class="seperator"> </span>
+      &nbsp{{vm.text}}
+  </md-button>
+</div>

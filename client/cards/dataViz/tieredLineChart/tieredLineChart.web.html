@@ -1,0 +1,24 @@
+<div class='tired-line-chart'>
+  <div ng-repeat="chart in vm.chartArray" flex>
+    <div class="background-blue">
+    <md-input-container class="parameter-container">
+      <drop-down flex-gt-md="50" flex="100"  model="chart.parameter"
+            options="vm.data.parameters"  on-change="vm.displaySelectedParameter(chart.parameter,$index)"></drop-down>
+    </md-input-container>
+    </div>
+    <div layout="row" class="background-blue">
+      <line-chart layout-fill data="chart.chartData" options="vm.lineChartOptions" class="line-chart" flex></line-chart>
+      <div layout="column" flex="20" class="curent-value-div" layout-align="center center" ng-if="vm.showCurrentValue">
+        <p class="current-value">{{chart.chartData[0].values[0].y | number:2 }}</p>
+        <p class="current-value-unit">{{chart.chartData[0].unit}}</p>
+      </div>
+    </div>
+    <div layout="column" layout-align="center" ng-show="$last">
+      <rzslider rz-slider-model="vm.slider.min" rz-slider-high="vm.slider.max" rz-slider-options="vm.slider.options"></rzslider>
+      <div layout="row">
+        <md-button ng-click="vm.addChart()" class="add-btn"> + </md-button>
+        <p>Add another Parameter</p>
+      </div>
+    </div>
+  </div>
+</div>

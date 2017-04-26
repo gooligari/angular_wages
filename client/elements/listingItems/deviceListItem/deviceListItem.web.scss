@@ -1,0 +1,12 @@
+@import "../../../style/variable";
+
+device-list-item {
+  min-width: 300px;
+
+  .critical {
+
+    .list-status-text {
+      color: $red;
+    }
+  }
+}

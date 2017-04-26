@@ -1,0 +1,271 @@
+// @import "../../../style/variable";
+
+$primary-text-color: #333;
+$muted-text-color: #aaa;
+$alarm-color: #bc0e00;
+$normal-color: #37c91a;
+$warning-color: #f4cb00;
+$black-background: #bbbbbb;
+
+.fleet-health-content {
+
+  background: linear-gradient($white, $black-background);
+  max-width: 800px;
+  position: relative;
+
+  .info-overlay-control {
+    color: $muted-text-color;
+    font-family: monospace, serif;
+    font-size: 40px;
+    outline: none;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    $hover-color: darken($muted-text-color, 20%);
+
+    &:hover {
+      color: $hover-color;
+      cursor: pointer;
+    }
+
+    span {
+      border: 3px solid $muted-text-color;
+      border-radius: 80px;
+      padding: 10px 20px;
+
+      &:hover {
+        border: 3px solid $hover-color;
+     }
+    }
+
+    &.close-btn span {
+      border: 3px solid $white;
+      color: $white;
+      font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+      padding: 0 20px;
+       }
+    }
+
+  .title {
+    color: $primary-text-color;
+    font-size: 25px;
+    padding: 15px;
+   }
+
+  .donut {
+    position: relative;
+
+    .summary {
+      bottom: 0;
+      color: $primary-text-color;
+      height: 120px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: -30px;
+      // width:180px;
+      // height:180px;
+      width: 120px;
+
+      .percent {
+        font-size: 60px;
+        margin-left: -20px;
+        }
+
+      .label {
+        font-size: 20px;
+        }
+
+      .view-btn {
+        display: inline-block;
+        margin-top: 15px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          background-color: $primary-text-color;
+          border-radius: 30px;
+          color: $white;
+          font-size: 20px;
+          font-weight: bold;
+          padding: 10px 20px;
+          }
+         }
+       }
+    }
+
+  .stat-boxes {
+    $canvas-container-height: 100px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -1.1 * $canvas-container-height;
+    text-align: center;
+    width: 100%;
+
+    .canvas-container {
+      height: $canvas-container-height;
+      width: 100%;
+
+      canvas {
+        height: 100%;
+        width: 100%;
+         }
+       }
+
+    .stat-box {
+      background-color: $white;
+      $border-color: #999;
+      color: $muted-text-color;
+      min-height: 90px;
+      outline: none;
+      padding: 30px;
+
+      &.center {
+        border-left: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+      }
+
+      &.active {
+        color: $primary-text-color;
+
+        &.normal {
+          border-bottom: 8px solid $normal-color;
+         }
+
+        &.warning {
+          border-bottom: 8px solid $warning-color;
+         }
+
+        &.alarm {
+          border-bottom: 8px solid $alarm-color;
+        }
+    }
+
+      .value {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+      .label {
+        font-size: 18px;
+      }
+     }
+    }
+
+  .info-overlay {
+    $black-rgba: rgba(0, 0, 0, .6);
+    background-color: $black-rgba;
+    color: $white; // rgba(255, 255, 255, 255)
+    font-size: 14px;
+    font-weight: bold;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .instruction {
+      height: auto;
+      opacity: 1;
+      position: absolute;
+     }
+
+    .category-summary-instruction {
+      left: 80px;
+      top: 80px;
+      width: 300px;
+
+      .arrow {
+        left: 80px;
+        position: absolute;
+        top: 150px;
+      }
+    }
+
+    .view-button-instruction {
+      bottom: 0;
+      // left: 0;
+      left: -100px;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      // top: 25%;
+      top: 250px;
+      width: 180px;
+
+      .arrow {
+        left: 0;
+        position: absolute;
+        top: 160px;
+         }
+       }
+
+    .stat-box-instruction {
+      bottom: 0;
+      // left: 0;
+      left: -100px;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      // top: 25%;
+      top: 450px;
+      width: 180px;
+
+      .arrow {
+        left: -20px;
+        position: absolute;
+        top: 150px;
+        transform: rotate(15deg);
+            }
+        }
+    }
+
+  #fleetHealthDonut path { // sass-lint:disable-line no-ids
+    fill-opacity: 10.2;
+    opacity: 100;
+    stroke: $white;
+    stroke-width: 0;
+   }
+
+  @media all and (max-width: 500px) and (min-width: 320px) {
+    /* For desktop: */
+    .fleet-health-content {
+      width: 320px;
+    }
+
+    .fleet-health-content .donut .summary .percent {
+      font-size: 0;
+    }
+
+    .label {
+      font-size: 10px;
+    }
+
+    .view-btn {
+      margin-top: 10px;
+    }
+
+    .info-overlay .category-summary-instruction .arrow {
+      left: 40px;
+      position: absolute;
+      top: 100px;
+    }
+
+    .info-overlay .view-button-instruction .arrow {
+      left: 0;
+      position: absolute;
+      top: 70px;
+    }
+
+    .info-overlay .stat-box-instruction .arrow {
+      left: -20px;
+      position: absolute;
+      top: -30px;
+    }
+  }
+}

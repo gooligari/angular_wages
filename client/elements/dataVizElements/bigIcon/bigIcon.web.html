@@ -1,0 +1,4 @@
+<div layout="column">
+  <i ng-style="{'color': vm.state ? vm.coloron : vm.coloroff, 'font-size': vm.size , 'height': vm.height}" class="icon" ng-class="vm.icon"></i>
+  <p class="display-state" ng-style="{'color': vm.stateColor(vm.state)}"><b>{{vm.stateDisplay}}</b></p>
+</div>

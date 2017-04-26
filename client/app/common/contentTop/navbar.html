@@ -1,0 +1,98 @@
+<!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <ul class="nav navbar-right top-nav f_right hide_desktop">
+
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  {{ profile.nickname }} <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                          </li>
+                          <!-- <li>
+                              <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                          </li>
+                          <li>
+                              <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                          </li> -->
+                          <li class="divider"></li>
+                          <li>
+                              <a href="" ng-click="logoutClick()"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+              <a class="navbar-brand" href="index.html">WAGES</a>
+          </div>
+          <!-- Top Menu Items -->
+          <ul class="nav navbar-right top-nav hide_mobile">
+
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  {{ profile.nickname }} <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                      <li>
+                          <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                      </li>
+                      <!-- <li>
+                          <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                      </li> -->
+                      <li class="divider"></li>
+                      <li>
+                          <a href="" ng-click="logoutClick()"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+          <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav side-nav">
+
+                  <li ng-class="{ active: isActive('/')}">
+
+                      <a ui-sref="dashboard"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i> Dashboard</a>
+                  </li>
+                  <li ng-class="{ active: isActive('/energy')}">
+                      <a ui-sref="energy"><i class="fa fa-fw fa-bar-chart-o"></i> Energy</a>
+                  </li>
+                  <li ng-class="{ active: isActive('/energytrend')}">
+                      <a ui-sref="energytrend"><i class="fa fa-fw fa-table"></i> Energy Trend</a>
+                  </li>
+                  <li ng-class="{ active: isActive('/shift')}">
+                      <a ui-sref="shift"><i class="fa fa-fw fa-edit"></i> Shift</a>
+                  </li>
+                  <li ng-class="{ active: isActive('/product')}">
+                      <a ui-sref="product"><i class="fa fa-fw fa-desktop"></i> Products</a>
+                  </li>
+                  <li ng-class="{ active: isActive('/budget')}">
+                      <a ui-sref="budget"><i class="fa fa-fw fa-wrench"></i> Budget</a>
+                  </li>
+                  <li ng-class="{ active: isActive('/dropdown')}">
+                      <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                      <ul id="demo" class="collapse">
+                          <li>
+                              <a href="#">Dropdown Item</a>
+                          </li>
+                          <li>
+                              <a href="#">Dropdown Item</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li ng-class="{ active: isActive('/baseline')}">
+                      <a href="baseline"><i class="fa fa-fw fa-file"></i> Baseline</a>
+                  </li>
+
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </nav>

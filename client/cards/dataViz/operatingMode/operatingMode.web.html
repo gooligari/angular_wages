@@ -1,0 +1,28 @@
+<div layout-fill class="operating-mode">
+  <h3 class="title blue"><b>Opearting Mode</b></h3>
+
+  <div class="fill"></div>
+
+  <div layout="row">
+    <div layout="column" ng-repeat="icons in vm.iconData" class="icons">
+      <big-icon icon="icons.icon" state="icons.state" coloron="icons.coloron" coloroff="icons.coloroff" size="icons.size"></big-icon>
+    </div>
+  </div>
+
+  <div class="fill"></div>
+
+  <div layout="row" class="margin-right">
+    <div layout=column class="moon-gauge-div" ng-repeat="x in vm.gaugeData" style="width:50%">
+      <span class="moon-gauge-title"><b>{{x.text}}</b></span>
+      <moon-gauge class="moon-gauge-display"
+            value="x.value"
+            max="70"
+            min="x.min"
+            text=""
+            unit=""
+            decimals="x.decimals">
+       </moon-gauge>
+       <big-number title="" unit="x.unit" value="x.value"></big-number>
+    </div>
+  </div>
+</div>

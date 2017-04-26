@@ -1,0 +1,31 @@
+@import "../../../style/variable";
+
+alarm-list-item {
+  min-width: 300px;
+
+  .critical {
+    .list-status-text {
+      color: $red;
+    }
+  }
+
+  .healthy {
+    list-item-status {
+      .healthy {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .offline {
+    .list-status-text {
+      color: $gray;
+    }
+  }
+
+  .warning {
+    .list-status-text {
+      color: $yellow;
+    }
+  }
+}

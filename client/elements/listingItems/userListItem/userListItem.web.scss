@@ -1,0 +1,115 @@
+@import "../../../style/variable";
+@import "../../../style/fonts/fonts";
+
+user-list-item {
+  min-width: 300px;
+
+  md-list-item {
+    .list-text-icon {
+      border: 1px solid $blue-bright;
+      border-radius: 50px;
+      color: $blue-bright;
+      font-size: 18px;
+      margin-bottom: 8px;
+      margin-right: 16px;
+      margin-top: 8px;
+      text-align: center;
+      width: 35px;
+    }
+
+    .md-secondary-container {
+      margin-right: -10px;
+    }
+
+    .action-icon {
+      height: 24px;
+    }
+
+    .more-options {
+      height: 100%;
+    }
+  }
+
+  .list-title,
+  .list-description,
+  .list-role-text {
+    text-overflow: clip;
+  }
+
+  md-list-item.list-item-not-lg {
+    .md-2-line .md-list-item-text,
+    .md-no-style .md-list-item-text {
+      margin-bottom: 12px;
+      margin-top: 14px;
+    }
+
+    .list-title {
+      font-family: $primary-font;
+      text-transform: capitalize;
+    }
+
+    .md-list-item-text > h4.list-role-text {
+      line-height: 1.4em;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .md-list-item-text > p.list-subtitle {
+      font-size: 12px;
+      line-height: 1.2em;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .list-description,
+    .list-role-text {
+      font-family: Arial;
+      font-size: .75em;
+      font-weight: normal;
+      opacity: .54;
+    }
+
+    .list-role-text {
+      text-transform: capitalize;
+    }
+  }
+
+  md-list-item.list-item-lg {
+    height: 60px;
+    min-height: 60px;
+
+    .md-button.md-no-style {
+      height: 60px;
+      min-height: 60px;
+    }
+
+
+    .list-title,
+    .list-subtitle {
+      text-transform: capitalize;
+    }
+
+    .list-title {
+      font-family: $primary-font;
+      font-size: 1.12em;
+    }
+
+    .list-description,
+    .list-role-text {
+      font-family: Arial;
+    }
+
+    .list-description {
+      opacity: .54;
+    }
+
+    .list-role-text {
+      font-family: Arial;
+      font-size: .87em;
+      font-weight: normal;
+      opacity: .54;
+      text-align: right;
+      text-transform: capitalize;
+    }
+  }
+}

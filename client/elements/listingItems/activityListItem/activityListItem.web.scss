@@ -1,0 +1,11 @@
+@import "../../../style/variable";
+
+activity-list-item {
+  min-width: 300px;
+
+  list-item {
+    md-list-item .list-icon {
+      color: $blue-bright;
+      }
+  }
+}

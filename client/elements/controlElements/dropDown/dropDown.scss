@@ -1,0 +1,77 @@
+@import "../../../style/variable";
+
+$dark-grey: #808080;
+
+.drop-down {
+  background-color: $black;
+  max-height: 48px;
+  min-height: 48px;
+
+  .md-select-value > span:not(.md-select-icon) .md-text {
+    color: $white;
+  }
+
+  .md-select-value .md-select-icon::after {
+    color: $white;
+  }
+
+  md-select .md-select-value {
+    border-bottom-color: transparent;
+    padding: 10px;
+    @extend .display-text;
+
+    .md-select-icon {
+      border-left: 1px solid $dark-grey;
+      height: 100%;
+    }
+
+    .md-select-menu-container {
+      width: 100%;
+    }
+
+    .md-select-value.md-select-placeholder {
+      @extend .display-text;
+      padding: 10px;
+    }
+ }
+
+  md-select:not([disabled]):focus .md-select-value {
+    border-bottom: none;
+    padding: 10px;
+    @extend .display-text;
+  }
+}
+
+.select-list md-select-menu {
+  background-color: $black;
+  margin-left: 15px;
+  margin-top: 50px;
+  width: 93.7%;
+  @extend .display-text;
+
+  md-content {
+    background-color: $black !important;
+    color: $white;
+  }
+
+  md-content md-option:not([disabled]):hover {
+    background: none;
+  }
+
+  md-content md-option {
+    color: $white;
+  }
+
+  md-content md-option[selected] {
+    background-color: $black;
+    color: $gold;
+  }
+}
+
+.display-text {
+  color: $white;
+  font-family: Din, Oxygen, Sans;
+  font-size: 87% ;
+  font-weight: bold;
+  text-transform: uppercase;
+}

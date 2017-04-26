@@ -1,0 +1,42 @@
+$background-color: #e6eaed;
+$border-color: #001342;
+
+.data-table {
+  background-color: $background-color;
+  max-height: 650px;
+  max-width: 1200px;
+}
+
+.exo-table-title {
+  border-top: 5px solid $border-color;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+  padding-left: 15px;
+  padding-top: 16px;
+}
+
+.exo-table-header {
+  margin-bottom: 16px;
+  padding-left: 15px;
+}
+
+.exo-table-body {
+  padding: 9.5px 0 9.5px 10px;
+}
+
+.exo-table {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 450px) and (min-width: 300px) {
+  .exo-table {
+    font-size: 13px;
+    }
+
+  .exo-table-body {
+    padding: 11.5px 0 11.5px 7px;
+    }
+}
+
+

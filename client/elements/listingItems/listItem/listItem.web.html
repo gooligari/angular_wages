@@ -1,0 +1,53 @@
+<md-list-item ng-hide="vm.size === undefined" class="md-2-line item-list-item" ng-click="vm.item.onClick()" layout="row" ng-class='vm.size == "lg" ? "list-item-lg" : "list-item-not-lg"'>
+  <list-item-status status="vm.item.status"></list-item-status>
+  <span ng-if="vm.item.textIcon && !vm.item.icon" class="list-icon list-text-icon">{{ vm.item.textIcon }}</span>
+  <icon ng-if="vm.item.icon" class="list-icon" ng-class="vm.item.icon"></icon>
+  <div ng-if="vm.size == 'lg'"
+       class="md-list-item-text item-list-item-text"
+       layout="row"
+       flex="70"
+       layout-align="start center"
+       >
+    <h3 class="list-title" flex="30"><b>{{ vm.item.title }}</b></h3>
+    <h4 class="list-description" flex="35">{{ vm.item.description }}</h4>
+    <p class="list-subtitle" flex="35">{{ vm.item.subtitle }}</p>
+  </div>
+  <div ng-if="vm.size=='lg'"
+       class="md-list-item-text"
+       flex="25"
+       layout="row"
+       layout-align="end center"
+       >
+     <span flex="50" ng-if="vm.item.label" class="list-label">{{ vm.item.label }}</span>
+     <span flex="50" ng-if="vm.item.duration && !vm.item.label" class="list-duration">{{ vm.item.duration }}</span>
+     <span flex="50" ng-if="vm.item.status && !vm.item.label && vm.item.status === 'critical'" class="list-status-text">{{ vm.item.status }}</span>
+     <span flex="50" ng-if="(vm.item.timestamp || vm.item.display_timestamp) && vm.item.status !== 'critical'" class="list-timestamp">{{ vm.item.display_timestamp || vm.item.timestamp }}</span>
+  </div>
+
+  <div ng-if="vm.size !== 'lg'"
+       class="md-list-item-text item-list-item-text"
+       layout="column"
+       flex="60"
+       layout-align=""
+       >
+    <p class="list-subtitle" layout-fill>{{ vm.item.subtitle }}</p>
+    <h3 class="list-title" layout-fill><b>{{ vm.item.title }}</b></h3>
+    <h4 class="list-description" layout-fill>{{ vm.item.description }}</h4>
+  </div>
+  <div ng-if="vm.size !== 'lg'"
+       class="md-list-item-text addition-info"
+       flex="40"
+       layout="column"
+       layout-align="space-between end">
+     <span flex ng-if="vm.item.label" class="list-label">{{ vm.item.label }}</span>
+     <span flex ng-if="vm.item.status && !vm.item.label && vm.item.status === 'critical'" class="list-status-text">{{ vm.item.status }}</span>
+     <span flex ng-if="(vm.item.timestamp || vm.item.display_timestamp) && vm.item.status !== 'critical'" class="list-timestamp">{{ vm.item.display_timestamp || vm.item.timestamp }}</span>
+     <span flex ng-if="vm.item.duration && !vm.item.label" class="list-duration">{{ vm.item.duration }}</span>
+  </div>
+
+  <ng-md-icon ng-if="vm.item.onClick && !vm.item.moreOptions"
+              icon="chevron_right"
+              class="md-secondary action-icon">
+  </ng-md-icon>
+  <more-options ng-if="vm.item.moreOptions" class="md-secondary more-options" options="vm.item.moreOptions"></more-options>
+</md-list-item>

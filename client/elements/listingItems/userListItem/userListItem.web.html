@@ -1,0 +1,60 @@
+<md-list-item ng-hide="vm.size === undefined" class="md-2-line item-list-item" ng-click="vm.item.onClick()" layout="row" ng-class='vm.size == "lg" ? "list-item-lg" : "list-item-not-lg"'>
+  <span ng-if="vm.item.textIcon && !vm.item.icon" class="list-icon list-text-icon">{{ vm.item.textIcon }}</span>
+  <!-- large layout -->
+  <div ng-if="vm.size == 'lg'"
+       class="md-list-item-text item-list-item-text"
+       layout="row"
+       flex="grow"
+       layout-align="start center">
+    <h3 class="list-title" flex="30"><b>{{ vm.user.name }}</b></h3>
+    <h4 class="list-description" flex="35">{{ vm.user.email }}</h4>
+  </div>
+  <div ng-if="vm.size === 'lg'"
+       class="md-list-item-text addition-info"
+       flex="30"
+       layout="row"
+       layout-align="end center">
+     <p ng-if="vm.user.role" class="list-role-text">{{ vm.user.role }}</p>
+  </div>
+
+  <!-- medium layout -->
+  <div ng-if="vm.size === 'md'"
+       class="md-list-item-text item-list-item-text"
+       layout="column"
+       flex="70"
+       layout-align="">
+    <h3 class="list-title" flex="30"><b>{{ vm.user.name }}</b></h3>
+    <h4 class="list-description" flex="35">{{ vm.user.email }}</h4>
+    <p ng-if="vm.user.status == 0" class="list-role-text">Not Activated</p>
+  </div>
+  <div ng-if="vm.size === 'md'"
+       class="md-list-item-text addition-info"
+       flex="30"
+       layout="column"
+       layout-align="center end">
+     <p ng-if="vm.user.role" class="list-role-text">{{vm.user.role}}</p>
+  </div>
+
+  <!-- small layout -->
+  <div ng-if="vm.size === 'sm'"
+       class="md-list-item-text item-list-item-text"
+       layout="column"
+       flex="70"
+       layout-align="">
+   <h3 class="list-title" flex="30"><b>{{ vm.user.name }}</b></h3>
+   <h4 class="list-description" flex="35">{{ vm.user.email }}</h4>
+   <p ng-if="vm.user.role" class="list-role-text">{{ vm.user.role }}</p>
+  </div>
+  <div ng-if="vm.size === 'sm'"
+       class="md-list-item-text addition-info"
+       flex="30"
+       layout="column"
+       layout-align="space-between end">
+  </div>
+
+  <ng-md-icon hide show-gt-sm ng-if="vm.user.onClick && !vm.user.moreOptions"
+              icon="chevron_right"
+              class="md-secondary action-icon"></ng-md-icon>
+  <more-options ng-if="vm.user.moreOptions" class="md-secondary" options="vm.user.moreOptions"></more-options>
+
+</md-list-item>

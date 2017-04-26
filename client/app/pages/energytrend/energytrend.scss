@@ -1,0 +1,104 @@
+// #chartd {
+//   width: 30%;
+//   height: 300px;
+//   float: right;
+// }
+// #chartdi {
+//   width: 45%;
+//   height: 300px;
+//   float: right;
+// }
+// #chartdiv {
+//   width: 40%;
+//   height: 300px;
+//   margin-top: 0px;
+// }
+// #chartspan {
+// width: 100% ;
+//   height: 300px;
+// }
+// .charts{
+//       margin: 1rem 0 !important;
+// }
+
+
+
+// $black-blk: #000000;
+// // $secondary: #ff0000;
+// // $gold-light: #00ff00;
+// // $white: #fff;
+// // $primary: #0000ff;
+
+// @import "../../../elements/all.scss";
+
+// /* sass-lint:disable no-important */
+// // I've done bad non-sass things here, but it works
+
+// .md-button.md-raised {
+//     border-radius: 20px;
+//     font-size: .87em;
+//     // font-variant: uppercase;
+//     font-weight: bold;
+//     letter-spacing: .05em;
+//     margin: 5px 15px 15px;
+//     padding: 0 16px;
+//     // box-shadow: 0 0 0 0;
+// }
+
+// .md-button.md-raised.secondary,
+// .md-button.md-raised.secondary.md-focused {
+//   border: 1px solid;
+//   border-color: $secondary;
+//   color: $secondary;
+//   opacity: 1;
+// }
+
+// .md-button.md-raised span.seperator {
+//   border-color: $black-blk;
+//   border-left: 1px solid;
+//   height: 100%;
+//   margin-right: 9px;
+// }
+
+// .md-button.md-raised.plain,
+// .md-button.md-raised.plain.md-focused,
+// .md-button.md-raised.primary,
+// .md-button.md-raised.primary.md-focused {
+//   background-color: $secondary;
+//   //border: 1px solid;
+//   border-color: $secondary;
+//   color: $white;
+// }
+
+// button.md-button.md-raised:not([disabled]) {
+//   box-shadow: 0 0 0 0;
+// }
+
+// .md-button.md-raised.action,
+// .md-button.md-raised.action.md-focused {
+//   background-color: $primary;
+//   border-color: $primary;
+// }
+
+// button.md-button.md-raised:not([disabled]) {
+//   box-shadow: 0 0 0 0;
+// }
+
+// .md-button.md-raised.md-primary.action:hover {
+//   background-color: $dark-grey;
+// }
+
+// .md-button.md-raised.md-primary.action:disabled,
+// .md-button.md-raised.md-primary.action.disabled {
+//   background-color: $dark-grey;
+//   opacity: 35%;
+// }
+
+// button.md-button.md-raised:not([disabled]) {
+//   box-shadow: 0 0 0 0;
+// }
+
+// .md-button.md-primary.md-raised:not([disabled]) md-icon {
+//    height: 35px;
+//    width: 35px;
+// }
