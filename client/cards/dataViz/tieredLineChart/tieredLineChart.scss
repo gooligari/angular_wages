@@ -1,0 +1,198 @@
+// @import "../../../style/fonts/fonts";
+//
+// tiered-line-chart {
+//
+//   .current-value {
+//     font-family: "Arial Regular";
+//     font-size: 125%;
+// }
+//
+//   .line-chart {
+//     background-color:#001342;
+//     //overriding NVD3 styles for line chart
+//     .nvd3 .nv-axis line {
+//         stroke: #1751C6;
+//     }
+//
+//     .nvd3-svg {
+//      padding-bottom: 30px;
+//    }
+//     .nv-point {
+//         stroke-opacity: 1 !important; //overriding default point style of nvd3 line chart
+//         stroke-width: 1px !important; //overriding default point style of nvd3 line chart
+//         fill-opacity: 0.2 !important; //overriding default point style of nvd3 line chart
+//      }
+//
+//     .nv-group.nv-series-0 {
+//         stroke: #BFCCDD !important; //overriding default line color of nvd3 line chart
+//      }
+//
+//     .caption {
+//       color: white;
+//    }
+//
+//     svg text {
+//       fill: white;
+//     }
+//
+//     .grid path {
+//       stroke-width: 0;
+//     }
+//
+//     .nvd3 text {
+//       font-family: $primary-font;
+//     }
+//
+//   }
+//
+//   .background-blue {
+//     background-color:#001342;
+//   }
+//
+// .md-text {
+//     color: white;
+// }
+//
+// .md-select-value .md-select-icon {
+//     color: white;
+// }
+// // /* code to change the image of the slider handel (blue circle)
+// .rz-pointer-min {
+// background-image: url("left.png");
+// background-position: center;
+// }
+//
+// .rz-pointer-max {
+// background-image: url("right.png");
+// background-position: center;
+//
+// }
+//
+//   .rzslider .rz-pointer.rz-active:after {
+//   background-color: transparent;
+//   }
+//
+//   .rzslider .rz-pointer:hover:after {
+//     background-color: transparent;
+// }
+//
+//   .rzslider .rz-pointer:after {
+//     background-color: transparent;
+// }
+//
+//   .rzslider .rz-pointer {
+//     z-index: 10;
+//     width: 32px;
+//     height: 32px;
+//     cursor: pointer;
+//     background-color:transparent;
+//      -webkit-border-radius: 0px;
+//      -moz-border-radius: 0px;
+//      border-radius: 0px;
+//      background-repeat: no-repeat;
+// }
+//
+//   .tired-line-chart {
+//     background-color:#EEF1F3;
+//     border-top: 10px solid #001342;
+//     max-width: 1200px;
+//     min-height: 320px;
+//     //min-width: 374px;
+//
+//     @media only screen and (max-width: 870px) {
+//        .tired-line-chart {
+//            max-height: 362px;
+//        }
+//     }
+//
+//
+//   .chart-title {
+//      width: 100%;
+//   }
+//
+//   .float-left {
+//     float: left;
+//   }
+//
+//   .float-right {
+//     float: right;
+//   }
+//
+//   .card-title-text {
+//     font-size: 20px;
+//     margin-left: 20px;
+//    }
+//
+//    .card-sub-title {
+//      color: white;
+//      font-size: 18px;
+//      text-transform: capitalize;
+//      padding-top: 2%;
+//      padding-left: 3%;
+//      padding-right: 3%;
+//    }
+//
+//   //Footer Bar Styles
+//    .footer {
+//      padding-top: 20px;
+//      padding-bottom: 24px;
+//      width: 100%;
+//      color: #101420;
+//
+//      .number-text {
+//         text-align: center;
+//         padding-left: 3%;
+//      }
+//      .description-text {
+//         text-align: center;
+//      }
+//
+//      .data-value {
+//        margin-top: 0px;
+//        margin-bottom: 0px;
+//      }
+//
+//      .data-name {
+//        margin-top: 2px;
+//        margin-bottom: 0px;
+//        font-size: 18px;
+//        font-weight: normal;
+//        text-transform: capitalize !important; //Overrides the uppercase style of H2 tag
+//      }
+//
+//     @media only screen and (min-width: 870px) {
+//
+//        .small-screen-footer {
+//          display: none;
+//        }
+//
+//        .divider {
+//           border-right: 2px solid #BFCCDD;
+//           height:40px;
+//        }
+//
+//       .data-name {
+//          margin-top: 8px;
+//          font-size: 18px;
+//          margin-bottom: 9px;
+//
+//        }
+//       .data-value {
+//          font-size: 32px;
+//          font-weight: normal;
+//       }
+//
+//       .number-text {
+//          text-align: center;
+//          padding-left: 5%;
+//      }
+//     }
+//
+//      @media only screen and (max-width: 870px) {
+//        .large-screen-footer {
+//          display: none;
+//        }
+//      }
+//    }
+//   }
+// }

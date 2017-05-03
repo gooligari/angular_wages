@@ -1,0 +1,17 @@
+// @import "../../../style/variable";
+
+binary-switch {
+
+  md-switch {
+    .md-thumb {
+      background-color: $secondary;
+    }
+
+    .md-checked {
+      .md-thumb {
+        background-color: $primary;
+    }
+   }
+  }
+
+}

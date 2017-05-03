@@ -1,0 +1,24 @@
+<div class="line-chart-card-container" >
+
+<div layout="row" class="chart-title">
+  <h2 class="card-title-text">{{vm.chart.title}}</h2>
+</div>
+
+<div class="line-chart-card-content">
+  <span class="card-sub-title float-left">{{vm.leftSubTitle}}</span>
+  <span class="card-sub-title float-right">{{vm.rightSubTitle}}</span>
+ <line-chart layout-fill data="vm.chart.data" options="vm.chart.options" title="vm.chart.title"></line-chart>
+</div>
+
+<div class="footer" layout="row">
+  <div class="large-screen-footer" ng-class="!$last ? 'divider' : ''" ng-repeat="detail in vm.details | limitTo: 3" layout="row" flex="33" layout-align="center">
+      <span class="description-text"><h2 class="data-name">{{detail.name}}</h2></span>
+      <span class="number-text"><h2 class="data-value">{{detail.value}}</h2></span>
+  </div>
+
+  <div class="small-screen-footer" ng-repeat="detail in vm.details | limitTo: 3" layout="column" flex="33" layout-align="center">
+      <span class="number-text"><h2 class="data-value">{{detail.value}}</h2></span>
+      <span class="description-text"><h2 class="data-name">{{detail.name}}</h2></span>
+  </div>
+</div>
+</div>

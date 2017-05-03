@@ -1,0 +1,107 @@
+<!-- not auth -->
+<div class="jumbotron " ng-if="!isAuthenticated">
+  <h2 class="text-center"><img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg"></h2>
+  <div class="text-center" ng-if="!isAuthenticated">
+    <p>You are not yet authenticated. <a href="/login">Log in.</a></p>
+  </div>
+</div>
+<!-- /not auth -->
+<!-- wrapper -->
+<div id="wrapper">
+  <!-- is auth -->
+  <div ng-if="isAuthenticated">
+    <!-- nav bar -->
+    <navbar></navbar>
+    <!-- /nav bar -->
+    <!-- main content -->
+    <div id="page-wrapper">
+      <!-- container -->
+      <div class="container-fluid">
+          <!-- content top -->
+          <div class="row">
+                  <div class="col-lg-12">
+                    <content-top></content-top>
+                  </div>
+          </div>
+          <!-- /content top -->
+          <!-- button card -->
+          <div class="well">
+                <div class="row">
+                  <div class="col-md-12">
+                      <h1 class="page-header">Button-card</h1>
+                    <span>Styled buttons used in place of Angular Material's built in buttons</span>
+                  </div>
+                  <div class="col-md-8" ng-if="!showCode">
+                    <button-card width="vm.button1Properties.width" height="vm.button1Properties.height" background="vm.button1Properties.background" color="vm.button1Properties.color" class="mystyle" text="vm.button1Properties.text" type="vm.button1Properties.type" on-click="vm.button1Properties.onClick()"></button-card>
+                    <button-card class="mystyle" text="vm.button2Properties.text" type="vm.button2Properties.type" on-click="vm.button2Properties.onClick()"></button-card>
+                    <button-card class="mystyle" logo="vm.button3Properties.logo" text="vm.button3Properties.text" type="vm.button3Properties.type" on-click="vm.button3Properties.onClick()"></button-card>
+                    <button-card class="mystyle" logo="vm.button4Properties.logo" text="vm.button4Properties.text" type="vm.button4Properties.type" on-click="vm.button4Properties.onClick()"></button-card>
+                  </div>
+                  <div  class="col-md-4">
+                    <p>parameters</p>
+                    <json-tree json='vm.button1Properties' collapsed-level="2"></json-tree>
+                  </div>
+
+                </div>
+          </div>
+            <!-- /button card -->
+            <!-- big number -->
+          <div class="well">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1 class="page-header">Big Number</h1>
+                      <span>used to quickly provide key information in a number format</span>
+                  </div>
+                  <div class="col-lg-8">
+                      <big-number decimals="vm.bigNumberProperties.decimals" title="vm.bigNumberProperties.title" unit="vm.bigNumberProperties.unit" value="vm.bigNumberProperties.value"></big-number>
+                  </div>
+                  <div class="col-lg-4">
+                    <p>parameters</p>
+                    <json-tree json='vm.bigNumberProperties' collapsed-level="2"></json-tree>
+                  </div>
+              </div>
+          </div>
+            <!-- /big number -->
+             <!-- column chart -->
+          <!--<div class="well">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1 class="page-header">Column Chart</h1>
+                  </div>
+                  <div class="col-lg-12">
+                       <p>Column chart with static data</p>
+                        <column-chart colors="vm.columnChartProperties.colors" labels="vm.columnChartProperties.labels" series="vm.columnChartProperties.series" data="vm.columnChartProperties.data"></column-chart>
+                  </div>
+                  <div class="col-lg-12">
+                    <p>parameters</p>
+                    <json-tree json='vm.columnChartProperties' collapsed-level="2"></json-tree>
+                  </div>
+              </div>
+          </div>-->
+            <!-- /column chart -->
+
+             <!-- more options -->
+          <div class="well">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1 class="page-header">More Options</h1>
+                  </div>
+                  <div class="col-lg-12">
+                       <p>More options can be used anywhere.</p>
+                        <more-options options="vm.moreOptionsProperties.text"></more-options>
+                  </div>
+                  <div class="col-lg-12">
+                    <p>parameters</p>
+                    <json-tree json='vm.moreOptionsProperties' collapsed-level="2"></json-tree>
+                  </div>
+              </div>
+          </div>
+            <!-- /more options -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /main content -->
+  </div>
+  <!-- /is auth -->
+</div>
+<!-- /wrapper -->

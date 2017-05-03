@@ -1,0 +1,56 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header"> 
+                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> -->
+                <a class="navbar-brand" href="/">WAGES</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+
+
+                <li class="dropdown" ng-if="isAuthenticated">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>   {{ profile.nickname }} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li> -->
+                        <li class="divider"></li>
+                        <li>
+                            <a href="" ng-click="logoutClick()"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+
+
+<div id="sidebar" class="sidebar-offcanvas">
+     <div class="col-md-2">
+        <div class="side-menu">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a ui-sref="dashboard"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a></li>
+            <li><a ui-sref="energy"><i class="fa fa-home" aria-hidden="true"></i>Energy Consumption</a></li>
+            <li><a ui-sref="energytrend"><i class="fa fa-bar-chart" aria-hidden="true"></i>Energy Trend Analysis</a></li>
+            <li><a ui-sref="shift"><i class="fa fa-university" aria-hidden="true"></i>Shift-Shift Comparison</a></li>
+            <li><a ui-sref="product"><i class="fa fa-cloud" aria-hidden="true"></i>Product Comparison</a></li>
+            <li><a ui-sref="budget"><i class="fa fa-align-center" aria-hidden="true"></i>Budget Vs Actual</a></li>
+            <li><a ui-sref="baseline"><i class="fa fa-bar-chart" aria-hidden="true"></i>Baseline Vs Actual</a></li>
+
+
+          </ul>
+        </div>
+     </div>
+</div>

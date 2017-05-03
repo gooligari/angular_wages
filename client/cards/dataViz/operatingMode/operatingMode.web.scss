@@ -1,0 +1,75 @@
+$bachground-color: #e6eaed;
+$border-color: #001342;
+$white: #ffffff;
+
+.operating-mode {
+  background-color: $bachground-color;
+  height: 340px;
+  max-width: 500px;
+  min-width: 320px;
+
+  .title {
+    border-top: 5px solid $border-color;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 16px;
+  }
+
+  .fill {
+    background-color: $white;
+    height: 1px;
+  }
+
+  .icons {
+    margin-bottom: 9px;
+    margin-top: 16px;
+    text-align: center;
+    width: 50%;
+
+    big-icon {
+      background-color: $bachground-color;
+    }
+  }
+
+  .moon-gauge-div {
+    big-number {
+      background-color: transparent;
+      margin-top: -5.5em;
+      z-index: 2;
+    }
+
+    moon-gauge {
+      background-color: transparent;
+    }
+
+    big-number .large {
+      font-size: 2.5em;
+    }
+  }
+
+  .states {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .moon-gauge-display {
+    text-align: center;
+    width: 100%;
+
+    .moon-gauge-value {
+      font-size: 0;
+    }
+  }
+
+  .moon-gauge-title {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .margin-right .moon-gauge-div:first-child {
+    border-right: 1px solid $white;
+    }
+}

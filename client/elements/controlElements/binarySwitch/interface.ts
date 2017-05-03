@@ -1,0 +1,3 @@
+interface BinarySwitch {
+  value: boolean
+}

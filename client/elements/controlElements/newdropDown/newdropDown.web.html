@@ -1,0 +1,7 @@
+<div class=drop-down>
+<md-select ng-model="vm.model" md-on-close="vm.onChange()" placeholder={{vm.placeHolder}}  md-container-class="select-list">
+  <md-option ng-repeat="option in vm.options" value="{{option}}">
+    {{option}}
+  </md-option>
+</md-select>
+</div>

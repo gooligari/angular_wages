@@ -1,0 +1,32 @@
+@import "../../../style/variable";
+
+moon-gauge {
+  background-color: $white;
+  height: 210px;
+  max-width: 275px;
+  padding: 5px;
+  width: 275px;
+
+  svg {
+    margin-top: -30px;
+  }
+
+  .moon-gauge {
+    width: 100%;
+  }
+
+  .moon-gauge-text {
+    font-size: 20px;
+    text-anchor: middle;
+  }
+
+  .moon-gauge-value {
+    font-size: 50px;
+    text-anchor: middle;
+  }
+
+  .moon-gauge-graduation {
+    stroke: $black;
+    stroke-width: 2px;
+  }
+}

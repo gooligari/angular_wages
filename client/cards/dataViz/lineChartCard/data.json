@@ -1,0 +1,29 @@
+{
+  "title": "Discharge Temperature",
+  "leftSubTitle": "Temperature",
+  "rightSubTitle": "4/5/2016",
+  "chart": {
+    "data": {
+       "name":"temperature",
+       "data": [1,2,3,4,5,6,7,8,9,10],
+       "unit": "F"
+     },
+
+    "options":"",
+    "title":""
+  },
+  "details": [
+    {
+      "name": "threshold",
+      "value": 37
+    },
+    {
+      "name": "duration",
+      "value": 37
+    },
+    {
+      "name": "peak temp",
+      "value": 42
+    }
+  ]
+}

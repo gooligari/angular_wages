@@ -1,0 +1,183 @@
+@import "../../../style/fonts/fonts";
+@import "../../../style/variable";
+
+$blue-line: #000080;
+$color-stroke: #bfccdd;
+$color-tick: #d3d3d3;
+
+line-chart-card {
+
+  .line-chart {
+    background-color: $blue;
+    //overriding NVD3 styles for line chart
+    .nvd3 .nv-axis line {
+        stroke: #1751C6;
+    }
+
+ .nvd3-svg {
+     padding-bottom: 30px;
+   }
+    .nvd3 .nv-axis path {
+      display: none
+    }
+
+    @media only screen and (max-width: 870px) {
+      .nv-axis.nv-y .tick line {
+        display: none;
+      }
+    }
+
+    .nv-point {
+      // sass-lint:disable-block no-important
+      fill-opacity: .2 !important; //overriding default point style of nvd3 line chart
+      stroke-opacity: 1 !important; //overriding default point style of nvd3 line chart
+      stroke-width: 1px !important; //overriding default point style of nvd3 line chart
+    }
+
+    .nv-group.nv-series-0 {
+      stroke: $color-stroke !important; // sass-lint:disable-line no-important //overriding default line color of nvd3 line chart
+     }
+
+    .nv-axis.nv-x .tick line {
+      display: none;
+    }
+
+    svg text {
+      fill: $white;
+    }
+
+    .grid .tick {
+      opacity: .7;
+      stroke: $color-tick;
+    }
+
+    .grid path {
+      stroke-width: 0;
+    }
+
+    .nvd3 text {
+      font-family: $primary-font;
+    }
+
+    .nv-x text {
+      font-size: 18px;
+    }
+
+    .nv-y text {
+      font-size: 18px;
+    }
+
+    .nv-area {
+      fill: url("#temperature-gradient");
+     }
+  }
+
+  .line-chart-card-container {
+    $line-chart-card-color: #eef1f3;
+    background-color: $line-chart-card-color;
+    border-top: 10px solid $blue;
+    max-width: 1200px;
+    min-height: 320px;
+    //min-width: 374px;
+
+    @media only screen and (max-width: 870px) {
+      .line-chart-card-container {
+        max-height: 362px;
+       }
+    }
+
+    .line-chart-card-content {
+      background-color: $blue;
+   }
+
+    .chart-title {
+      width: 100%;
+   }
+
+    .float-left {
+      float: left;
+   }
+
+    .float-right {
+      float: right;
+   }
+
+    .card-title-text {
+      font-size: 20px;
+      margin-left: 20px;
+   }
+
+    .card-sub-title {
+      color: $white;
+      font-size: 18px;
+      padding-left: 3%;
+      padding-right: 3%;
+      padding-top: 2%;
+      text-transform: capitalize;
+   }
+
+    //Footer Bar Styles
+    .footer {
+      color: $black-darker;
+      padding-bottom: 24px;
+      padding-top: 20px;
+      width: 100%;
+
+      .number-text {
+        padding-left: 3%;
+        text-align: center;
+       }
+
+      .description-text {
+        text-align: center;
+       }
+
+      .data-value {
+        margin-bottom: 0;
+        margin-top: 0;
+       }
+
+      .data-name {
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-top: 2px;
+        text-transform: capitalize !important; // sass-lint:disable-line no-important //Overrides the uppercase style of H2 tag
+       }
+
+      @media only screen and (min-width: 870px) {
+
+        .small-screen-footer {
+          display: none;
+        }
+
+        .divider {
+          border-right: 2px solid $blue-light;
+          height: 40px;
+        }
+
+        .data-name {
+          font-size: 18px;
+          margin-bottom: 9px;
+          margin-top: 8px;
+       }
+
+        .data-value {
+          font-size: 32px;
+          font-weight: normal;
+        }
+
+        .number-text {
+          padding-left: 5%;
+          text-align: center;
+        }
+    }
+
+      @media only screen and (max-width: 870px) {
+        .large-screen-footer {
+          display: none;
+       }
+     }
+   }
+  }
+  }

@@ -1,0 +1,30 @@
+$white: #ffffff;
+$text-color: #101420;
+
+big-number {
+  margin: 10px 10px 20px;
+
+  .outer {
+    background-color: $white;
+    text-align: center;
+	}
+
+  label {
+    margin-bottom: 0;
+	}
+
+  .large {
+    color: $text-color;
+    font-family: "DINOT", "Oxygen", Arial, sans-serif;
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 100%;
+    text-align: center;
+	}
+
+  .small {
+    color: $text-color;
+    font-size: 25px;
+    padding: 9px 0 24px;
+	}
+}
